@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>首页</title>
+<link rel="Stylesheet" type="text/css" href="css/style.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script type="text/javascript">
+	  //仿真检测账号、密码
+		if(localStorage.userid!="guest" || sessionStorage.userpwd!="1234"){
+			alert("账号密码错误，请回首页登录!!");
+			sessionStorage.removeItem('userpwd');
+			document.location="ch11_04.htm";
+		}
+</script>
+</head>
+<body>
+<div class="toubu">
+  <div class="biaoti">
+	   <div class="login">
+		   <span style="text-decoration: none; color:#a4cd89">欢迎光临~guest，你好！</span><a style="color:#a4cd89"></a><a href="login.html" style="text-decoration: none; color:#a4cd89">注销</a>
+  </div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">两江游</a></li>
+      <li><a href="#d">周边游</a></li>
+      <li><a href="#c">三峡游</a></li>
+      <li><a href="#b">出境游</a></li>
+      <li><a href="#a">关于我们</a></li>
+    </ul>
+  </div>
+</div>
+<div class="xc">
+  <div class="tupian">
+	  
+  <a name="a"></a>
+    <div class="tu1">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu2">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu3">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu4">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu5">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu6">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu7">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+    <div class="tu8">
+      <div class="tm"><a href="#">立刻购买</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="shipin"> 
+	<video id="myVideo1" autoplay="autoplay" controls="controls" width="770">
+    <source src="video/myVideo.ogg" type="video/ogg"/>
+    <source src="video/myVideo.webm" type="video/webm"/>
+    <source src="shipin1.mp4" type="video/mp4"/>
+    您的浏览器不支持video标签
+</video>
+  <video id="myVideo2" autoplay="autoplay" controls="controls" width="770">
+    <source src="video/myVideo.ogg" type="video/ogg"/>
+    <source src="video/myVideo.webm" type="video/webm"/>
+    <source src="shipin2.mp4" type="video/mp4"/>
+    您的浏览器不支持video标签
+</video>
+	
+</div>
+	
+<div class="zhanshi">
+
+<div class="ban">
+<a name="d"></a>
+  <div class="left">
+    <div class="t1"></div>
+    <div class="z1"><a href="https://www.mafengwo.cn/i/12928822.html" style="text-decoration: none; color:#a4cd89">我的北京往事</a></div>
+    <div class="z1s">北京 ，一个从小就传唱的名字，在国人心目中的位置那是相当重要，我也不例外。 小时候就特别向往天安门，还好奇的问了妈妈一个问题......</div>
+  </div>
+  <div class="center">
+    <div class="t2"></div>
+    <div class="z2"><a href="https://www.mafengwo.cn/i/12928822.html" style="text-decoration: none; color:#a4cd89">西班牙的八月天</a></div>
+    <div class="z2s">在被古 罗马 水渠的震惊中缓过劲儿来之后，我们先去吃了塞戈维亚很有名的烤乳猪,填饱了肚子才继续前行来到了塞戈维亚的马约尔广场...... </div>
+  </div>
+  <div class="right">
+    <div class="t3"></div>
+    <div class="z3"><a href="https://www.mafengwo.cn/i/12928822.html" style="text-decoration: none; color:#a4cd89">世界尽头与冷酷仙境</a></div>
+    <div class="z3s">Guide to Iceland是冰岛最大的旅行平台汇聚了逾千家本地旅游业供应商，涉及旅行团、租车、住宿等多种服务。有中文页面，浏览起来非常方便......</div>
+  </div>
+  </div>
+ 
+<div id="zuihou"></div>
+<a href="#" class="zd"><img src="images/s.png"/></a>
+<div class="sj"><img src="images/sj.png"/><img src="images/ewm.png" class="ewm"/></div>
+        </body>
+</html>

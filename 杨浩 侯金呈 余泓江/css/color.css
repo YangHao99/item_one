@@ -1,0 +1,138 @@
+body {
+	background: url(111.jpg) ;
+	background-size: cover;
+	-moz-background-size: cover;
+	width: 100%;
+	height: auto;
+	font-family: Arial, 稬硁タ堵砰;
+	font-size: .68rem;
+}
+header{
+	text-align: center;
+	position: absolute;
+	top: 0;
+	height:5%;
+	width:100%;
+	font-size: .68rem;
+	
+}
+h5,h4{
+	font-size: 1.5rem;
+	color: #ffffff;
+	font-family: 'Pinyon Script';
+	font-weight: 600;
+	text-shadow: 5px 5px 0.3rem #62819d;
+	top:.68rem;
+	bottom: .62rem;
+}
+@font-face {
+	font-family: 'Pinyon Script';
+	src: url( fonts/PinyonScript-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+.box1 {
+	position: absolute;
+	left: 75%;
+	top: 23%;
+	animation: rotate 2s linear infinite;
+}
+img {
+	width: 100px;
+	display: block;
+}
+ @keyframes rotate {
+ 0% {
+ transform: rotateZ(0deg);
+}
+ 100% {
+ transform: rotateZ(-360deg);
+}
+}
+
+.div1{
+	width: 30%;
+	height: 40%;
+	background:#35CEE0;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	right: 45%;
+	bottom: 30%;
+	border-radius: 35px;
+}
+
+#wenzi{
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: bold;
+	color:blue;
+	/* position: relative; */
+	position: absolute;
+	left: 50px;
+	
+}
+#img_turn {
+	height: 85%;
+	width: 100%;
+	position: absolute;
+	left:0;
+	bottom: 0%;
+	border-radius: 35px;
+}
+input:focus {
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: 0 0 5px 1px rgba(255,255,255,0.5);
+	overflow: hidden;
+}
+
+
+form {
+	width: 25%;
+	height: 40%;
+	position: absolute;
+	top: 35%;
+	left: 70%;
+	border: thin inset #FFFFFF;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 3px 0px 5px 0px #333333;
+	box-shadow: 3px 0px 5px 0px #333333;
+	magin-padding: 1%;
+	/* margin: 15% auto; */
+	line-height: normal;
+}
+.last {
+	width: 100%;
+	height: 8.5%;
+	position:absolute;
+	bottom: 0.8%;
+	border: lightblue 2px solid;
+	color: #000000;
+	clear: left;
+	text-align: center;
+}
+button.submit {
+    background-color: #1C6CDC;
+    background: linear-gradient(top, #1C6CDC, #3BA5CE);
+    border: 1px solid #3BA5CE;
+    border-bottom: 1px solid #8B48E4;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #ffffff;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
+}
+
+button.submit:active {
+    border: 1px solid #0FEDE4;
+    box-shadow: 0 0 10px 5px #1B11DA inset;
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>team1</title>
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<script type="text/javascript">
+		
+		
+		function randomRgbColor() { //随机生成RGB颜色
+            var r = Math.floor(Math.random() * 256); //随机生成256以内r值
+            var g = Math.floor(Math.random() * 256); //随机生成256以内g值
+            var b = Math.floor(Math.random() * 256); //随机生成256以内b值
+            return "rgb(" + r + "," + g + "," + b + ")"; //返回rgb(r,g,b)格式颜色
+        }
+        window.onload = function () {
+            draw();
+            document.getElementById("changeImg").onclick=function(){
+                draw();
+            }
+        }
+
+        function draw(){
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            canvas.width = 120;
+            canvas.height = 40;
+            context.strokeRect(0, 0, 120, 40);
+            var aCode = "A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,1,2,3,4,5,6,7,8,9";
+            console.log(aCode.split(","));
+            var aLength = aCode.split(",").length;
+            for (var i = 0; i <= 3; i++) {
+                var x = 20 + i * 20;
+                var y = 20 + Math.random() * 10;
+                var j = Math.floor(Math.random() * aLength);
+                var deg = Math.random() * 90 * Math.PI / 180;//随机弧度
+                var txt = aCode.split(",")[j];
+                context.fillStyle = randomRgbColor();
+                context.font = "bold 20px 微软雅黑";
+                //修改坐标原点和旋转角度
+                context.translate(x, y);
+                context.rotate(deg);
+                context.fillText(txt, 0, 0);
+                //恢复坐标原点和旋转角度
+                context.rotate(-deg);
+                context.translate(-x, -y);
+            }
+            //干扰线
+            for (var i = 0; i < 8; i++) {
+                context.strokeStyle = randomRgbColor();
+                context.beginPath();
+                context.moveTo(Math.random() * 120, Math.random() * 40);
+                context.lineTo(Math.random() * 120, Math.random() * 40);
+                context.stroke();
+            }
+            /**绘制干扰点**/
+            for (var i = 0; i < 20; i++) {
+                context.fillStyle = randomRgbColor();
+                context.beginPath();
+                context.arc(Math.random() * 120, Math.random() * 40, 1, 0, 2 * Math.PI);
+                context.fill();
+            }
+        }
+
+	
+		
+		
+	function sendok(){	
+	if(userid.value!="" && userpwd.value!=""){		
+		localStorage.userid=userid.value;
+		sessionStorage.userpwd=userpwd.value;
+		return true;
+	}else{
+		alert("请输入账号");
+		return false;
+	}
+}
+
+function isload(){
+if(localStorage.userid)
+	userid.value=localStorage.userid;
+}
+</script> 
+</head>
+	
+<body onload="isload()">
+	<audio src="music/music2.mp3" autoplay></audio>
+	<header>
+	<h5>欢迎来到爱玩旅游网</h5>
+	<h4>Enjoy The Travel,We Are On The Road</h4></header>
+	<div class="dl">
+	<div class="box1"><img src="images/fengche.png"></div>
+	
+<form method="post" action="shouye.html" onsubmit="return sendok();">
+	账号：<input type="text" id="userid" placeholder="请输入账号" autofocus><br />
+	密码：<input type="password" id="userpwd" placeholder="请输入密码"><br />
+	
+	<span id="yanzheng">验证码：<input type="tel" id="yanz" placeholder="请输入验证码"></span>
+	<!-- <canvas id="canvas"></canvas>
+	<a href="javascript:;" id="changeImg">再换一张</a><br/> -->
+	(测试账号：guest 密码:1234)<br />
+	<button class="submit" type="submit">登录</button><br />
+	&nbsp;&nbsp;没有账号，<a href="zhuce.html" id="zc">点此注册</a>
+	</form>
+	<canvas id="canvas" width="35px" height="10px"></canvas>
+	<a href="javascript:;" id="changeImg">再换一张</a><br/>
+	
+		</div>
+	<div class="div1">
+	<span id="wenzi">美丽风景展示</span>
+		 <img id="img_turn" src="img/banner_1.png" width="60%">
+		<script>
+		
+		var img=document.getElementById("img_turn");
+        var num=1;
+
+        //每隔2.5秒切换图片
+        function fun() {
+            num++;
+            if (num>10){
+                num=1;
+            }
+            img.src="img/banner_"+num+".png";
+        }
+
+        //循环定时器
+        setInterval(fun,2500);
+</script>
+		</div>
+
+		<footer class="last" >
+		<p class="foot1"><span>联系电话：15310353060 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：重庆邮电大学移通学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：1256587859@qq.com</span></p>
+			<p class="foot2"><span>版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 侵权必究</span></p>
+		</footer>
+			
+	</body>
+</html>
